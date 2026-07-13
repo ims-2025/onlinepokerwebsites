@@ -1,0 +1,5 @@
+User-Agent: *
+Allow: /
+
+Host: https://onlinepokerwebsites.com
+Sitemap: https://onlinepokerwebsites.com/sitemap.xml

@@ -1,0 +1,10 @@
+// Renders a JSON-LD structured-data script. Server component — no client JS.
+export default function JsonLd({ data }: { data: Record<string, unknown> | Record<string, unknown>[] }) {
+  return (
+    <script
+      type="application/ld+json"
+      // JSON.stringify output is safe structured data we control
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
+    />
+  );
+}
