@@ -1,0 +1,453 @@
+// News articles. Body strings support markdown-style links [label](/path) and **bold**,
+// rendered safely by the RichText component. Add new articles to this array — the
+// /news hub, homepage block and sitemap update automatically.
+
+export type NewsBlock =
+  | { type: "p"; text: string }
+  | { type: "h2"; text: string }
+  | { type: "list"; items: string[] };
+
+export type NewsArticle = {
+  slug: string;
+  title: string;
+  metaTitle: string;
+  description: string;
+  category: string;
+  author: string;
+  date: string; // ISO yyyy-mm-dd
+  readMins: number;
+  excerpt: string;
+  tags: string[];
+  body: NewsBlock[];
+};
+
+export const AUTHOR = "OnlinePokerWebsites Editorial";
+
+export const newsArticles: NewsArticle[] = [
+  {
+    slug: "acr-venom-2026-record-guarantees",
+    title: "ACR's Venom Series Returns Bigger in 2026: What Record Guarantees Mean for US Players",
+    metaTitle: "ACR Venom 2026: Record Guarantees Explained for US Poker Players",
+    description:
+      "Americas Cardroom's Venom is back with its largest guarantees yet. We break down the schedule, satellites and what the numbers mean for US and Canadian players in 2026.",
+    category: "Tournaments",
+    author: AUTHOR,
+    date: "2026-08-03",
+    readMins: 6,
+    excerpt:
+      "The Venom has grown into the biggest regular tournament open to US players. Here's what the 2026 edition's record guarantees actually mean for your bankroll.",
+    tags: ["Americas Cardroom", "Venom", "tournaments", "WPN"],
+    body: [
+      { type: "p", text: "Americas Cardroom has confirmed the return of the Venom, its flagship multi-million-dollar tournament series, with the largest guarantees the US-facing market has ever seen. For recreational players and grinders alike, the headline numbers are eye-catching — but the more useful question is what those guarantees mean in practice for how you qualify, how you bankroll a run, and whether the value is really there." },
+      { type: "p", text: "The Venom has become the signature event on the Winning Poker Network, and it is the single biggest reason [Americas Cardroom](/reviews/americas-cardroom/) continues to top our rankings of poker sites open to North American players. No other room accepting US customers offers guarantees on this scale with this depth of satellite qualifying. Below, we unpack the format, the routes in, and the realistic expectations you should set." },
+      { type: "h2", text: "What the Venom actually is" },
+      { type: "p", text: "The Venom is a large-field, multi-day No-Limit Hold'em tournament with a headline guaranteed prize pool in the millions, now complemented by a Pot-Limit Omaha variant. Its defining features are a deep starting stack, a slow structure that rewards skilled post-flop play, and a mystery-bounty element that scatters cash rewards — including a very large top bounty — throughout the field. That combination is deliberately designed to appeal to both serious tournament players and hobbyists chasing a life-changing score." },
+      { type: "p", text: "Because the buy-in for the main event runs into four figures, most players do not buy in directly. Instead they qualify through a laddered network of satellites that can start for just a few dollars. Understanding that satellite ecosystem is the key to playing the Venom affordably, and it is where a lot of the genuine value lives." },
+      { type: "h2", text: "The satellite ladder: how to get in cheap" },
+      { type: "p", text: "ACR runs a continuous stream of satellites in the weeks before the main event. These range from micro-stakes 'feeder' events that award seats into larger qualifiers, up to direct satellites that hand out full main-event tickets. The practical implication is that a disciplined player can turn a small, fixed investment into a shot at a massive prize pool without ever risking the full buy-in." },
+      { type: "list", items: [
+        "Step satellites let you climb from a few dollars to a full seat over several stages.",
+        "Direct satellites award main-event tickets in a single tournament, usually for a mid-range buy-in.",
+        "Ticket stacking means unused tickets can often be reused for other qualifying events, reducing waste.",
+      ] },
+      { type: "p", text: "If you are new to satellite strategy, our guide on [how to choose and get the most from a poker site](/guides/how-to-choose-a-poker-site/) covers the fundamentals of evaluating a room's tournament ecosystem, and it pairs well with a focused satellite plan for a series like this." },
+      { type: "h2", text: "Reading the guarantees correctly" },
+      { type: "p", text: "A record guarantee is a marketing number, and it is important to read it correctly. The guarantee is the minimum the prize pool will reach; if entries fall short, the operator tops it up (an 'overlay', which is good for players), and if entries exceed it, the pool simply grows. Larger guarantees generally attract larger fields, which means more variance and a lower probability of cashing on any single attempt — but a much bigger reward when you do run deep." },
+      { type: "p", text: "For bankroll purposes, treat the Venom as a high-variance shot rather than a reliable earner. The sensible approach is to allocate a small, pre-decided portion of your bankroll to satellite attempts, accept that most attempts will not convert, and view a deep run as upside rather than an expectation. This is the same discipline we recommend when evaluating any [welcome bonus or promotional value](/guides/poker-bonuses-explained/): judge it by what you will realistically collect, not by the biggest number on the banner." },
+      { type: "h2", text: "Why this matters for US and Canadian players specifically" },
+      { type: "p", text: "The Venom is significant precisely because of who can play it. Players in most US states, and in Canada, have limited access to large regulated online tournaments, and the offshore market fills that gap. ACR's scale means US and Canadian players can compete for guarantees comparable to the international sites they read about but often cannot access." },
+      { type: "p", text: "That access comes with the standard offshore caveat: these rooms are not licensed by US state regulators, so players trade some consumer protection for availability and prize-pool scale. If you are unsure where your state stands, our [US online poker legality guide](/guides/us-poker-legality/) explains the regulated-versus-offshore landscape in plain English, and it is worth reading before you deposit for a series." },
+      { type: "h2", text: "Practical tips for a Venom run" },
+      { type: "list", items: [
+        "Decide your total series budget in advance and never top it up impulsively.",
+        "Start satellites early — the ladder is cheapest and softest well before the main event.",
+        "Prefer crypto banking for fast deposits and withdrawals during a busy series.",
+        "Bank a portion of any satellite win rather than immediately re-investing all of it.",
+        "Treat the main event as a freeroll on your satellite investment, not a must-play.",
+      ] },
+      { type: "h2", text: "The bottom line" },
+      { type: "p", text: "The 2026 Venom's record guarantees reinforce why ACR remains the default choice for tournament-minded players in North America. The value is real, but it is unlocked through disciplined satellite play and sensible bankroll management, not by firing the full buy-in on impulse. Approach it as a structured, budgeted shot at genuine upside, and the series becomes one of the most compelling reasons to have an account at a top US-facing room. For a full breakdown of the site itself, see our in-depth [Americas Cardroom review](/reviews/americas-cardroom/)." },
+    ],
+  },
+  {
+    slug: "crypto-default-offshore-poker-2026",
+    title: "Crypto Is Now the Default at Offshore Poker Sites — Here's Why It Matters",
+    metaTitle: "Why Crypto Became the Default Banking Method at Poker Sites (2026)",
+    description:
+      "Cryptocurrency has quietly become the standard way to deposit and withdraw at US-facing poker sites. Here's why, what it means for payout speed, and how to use it safely.",
+    category: "Banking & Crypto",
+    author: AUTHOR,
+    date: "2026-08-01",
+    readMins: 6,
+    excerpt:
+      "Card deposits are fading and crypto has taken over offshore poker banking. We explain what changed, why payouts are faster, and how to do it safely.",
+    tags: ["crypto", "banking", "withdrawals", "USDC", "Bitcoin"],
+    body: [
+      { type: "p", text: "If you have opened an account at a US-facing poker room in the last year, you will have noticed something: cryptocurrency is no longer the alternative option tucked below the credit-card logos — it is the headline method, and increasingly the only one that works smoothly end to end. This shift has quietly reshaped how North American players fund their poker, and understanding it will save you time, fees and frustration." },
+      { type: "p", text: "The change is most visible at rooms like [BetOnline](/reviews/betonline-poker/) and its sister site [SportsBetting.ag](/reviews/sportsbetting-ag/), where the cashier is built crypto-first and card deposits carry real friction. But it is true across the offshore market. Here is what drove the shift, and what it means for you as a player." },
+      { type: "h2", text: "Why card deposits stopped being reliable" },
+      { type: "p", text: "Traditional card processing for offshore gambling has always been fragile. Banks decline a large share of these transactions, processing fees are high, and — crucially — cards generally cannot be used for withdrawals. That last point is the killer: even when a card deposit works, you still need another method to get paid, which historically meant slow bank wires or courier checks." },
+      { type: "p", text: "Cryptocurrency solves the whole loop. Deposits are near-instant, withdrawals go back to your wallet the same way, and there is no bank in the middle deciding whether to approve a gambling transaction. Once players experienced same-day payouts, the old methods started to look obsolete." },
+      { type: "h2", text: "The payout-speed difference is real" },
+      { type: "p", text: "The single biggest practical benefit is cash-out speed. Where a bank wire or check could take one to two weeks, crypto withdrawals at a well-run room typically clear within 24 to 48 hours, and often faster. For players who move money in and out regularly, that difference is transformative — your bankroll is genuinely liquid rather than locked in a slow queue." },
+      { type: "p", text: "Our [deposits and withdrawals guide](/guides/deposits-and-withdrawals/) breaks down realistic timeframes and fees for every method, but the summary is simple: crypto is the fastest and cheapest route at essentially every site we review, and it is the method we recommend by default." },
+      { type: "h2", text: "Stablecoins removed the last objection" },
+      { type: "p", text: "The most common reason players avoided crypto used to be price volatility — nobody wants their bankroll swinging 10% while it sits in a wallet. Stablecoins have effectively removed that objection. Coins like USDC and USDT are pegged to the US dollar, so a balance stays worth what you deposited. You get all the speed and low-fee benefits of crypto banking without exposure to the crypto market." },
+      { type: "p", text: "For most players, the ideal setup now is to buy a stablecoin on a mainstream exchange, move it to the poker site, and convert back to dollars on cash-out. It behaves almost exactly like a fast, fee-free bank transfer that no bank can decline." },
+      { type: "h2", text: "What this means when choosing a site" },
+      { type: "p", text: "Because banking quality now varies so much between rooms, it has become a bigger factor in where you should play. A site with a wide crypto menu, no platform fees and fast processing is meaningfully better than one that still leans on cards. We weigh this heavily in our rankings — see our [guide to choosing a poker site](/guides/how-to-choose-a-poker-site/) for the full checklist, where banking sits alongside traffic and rewards as a core criterion." },
+      { type: "list", items: [
+        "Look for a broad coin selection (Bitcoin, Ethereum, Litecoin, USDC, USDT at minimum).",
+        "Confirm there are no platform fees on crypto withdrawals.",
+        "Check typical payout times — 24–48 hours is the standard to expect.",
+        "Prefer stablecoins for holding a bankroll to avoid price swings.",
+      ] },
+      { type: "h2", text: "Using crypto safely" },
+      { type: "p", text: "Crypto is powerful but unforgiving — transactions cannot be reversed, so a few habits matter. Always double-check the deposit address before sending. Enable every security feature the site and your exchange offer, including two-factor authentication. Keep only what you intend to play with on the site, and withdraw winnings regularly rather than letting a large balance accumulate on any offshore platform." },
+      { type: "p", text: "None of this is complicated once you have done it once. The learning curve is a single afternoon, and the payoff is a banking experience that is faster and cheaper than anything the card era offered." },
+      { type: "h2", text: "The bottom line" },
+      { type: "p", text: "Crypto becoming the default is genuinely good news for players: faster payouts, lower fees, and — thanks to stablecoins — none of the volatility that used to put people off. If you are still trying to fund your poker with a card, you are fighting the system the hard way. Learn the crypto workflow once, and every deposit and cash-out afterward becomes dramatically smoother. For the step-by-step, start with our [banking guide](/guides/deposits-and-withdrawals/)." },
+    ],
+  },
+  {
+    slug: "us-online-poker-2026-state-regulation-outlook",
+    title: "US Online Poker in 2026: Which States Are Moving Toward Regulation",
+    metaTitle: "US Online Poker 2026: State Regulation Outlook & What It Means",
+    description:
+      "A plain-English 2026 update on US online poker regulation — which states have legal rooms, which are debating it, and what it means for players today. Not legal advice.",
+    category: "Legal & Regulation",
+    author: AUTHOR,
+    date: "2026-07-30",
+    readMins: 7,
+    excerpt:
+      "Regulated online poker is still a state-by-state patchwork. Here's where things stand in 2026 and what it means for where you can actually play.",
+    tags: ["legality", "regulation", "US states", "shared liquidity"],
+    body: [
+      { type: "p", text: "US online poker remains one of the most confusing corners of American gambling law, and 2026 has not changed the fundamental picture: it is a state-by-state patchwork, not a national market. A handful of states run their own regulated rooms, most do not, and the majority of American players still rely on offshore sites to get a game. This article is a plain-English snapshot of where things stand — and, importantly, what it means for you today. It is general information, not legal advice." },
+      { type: "p", text: "If you want the deeper reference, our [US online poker legality guide](/guides/us-poker-legality/) covers the federal-versus-state framework in detail. Here we focus on the current momentum and the practical takeaways." },
+      { type: "h2", text: "The states with regulated poker today" },
+      { type: "p", text: "A small group of states have passed laws to license and regulate online poker. These markets are legal, state-supervised, and in several cases share player pools through a multi-state agreement that pools liquidity across borders — a critical detail, because poker only works with enough players to fill tables." },
+      { type: "list", items: [
+        "Nevada — one of the earliest to regulate online poker.",
+        "New Jersey — a mature market with multiple licensed rooms.",
+        "Pennsylvania — a large regulated market by population.",
+        "Michigan — regulated and participating in shared-liquidity agreements.",
+        "Delaware, West Virginia and Connecticut — smaller regulated markets.",
+      ] },
+      { type: "p", text: "In these states, residents can play on licensed platforms with full consumer protections. The trade-off is that player pools, while growing through shared liquidity, are still smaller than the offshore networks that serve the whole continent." },
+      { type: "h2", text: "The states to watch" },
+      { type: "p", text: "The interesting movement in 2026 is among states weighing whether to join the regulated club. Several larger states periodically debate online gaming bills, usually bundling poker with online casino gaming because the tax revenue from casino games is what makes the legislation financially attractive to lawmakers. Poker tends to ride along as a smaller line item rather than the driving force." },
+      { type: "p", text: "The pattern to understand is that expansion is driven by budgets and neighboring-state competition, not by poker demand specifically. When one state sees another collecting tax revenue from regulated online gaming, the political calculus shifts. That is the mechanism most likely to add new regulated poker markets over time." },
+      { type: "h2", text: "Why shared liquidity is the real story" },
+      { type: "p", text: "For players in regulated states, the most consequential trend is not new states joining — it is existing states combining their player pools. Multi-state agreements let operators spread the same tournaments and cash games across several states at once, which directly improves game quality: bigger guarantees, fuller tables, more action at more stakes. As more regulated states join shared-liquidity compacts, the regulated product becomes genuinely competitive with offshore traffic." },
+      { type: "h2", text: "What it means for players right now" },
+      { type: "p", text: "The practical situation in 2026 comes down to your location:" },
+      { type: "list", items: [
+        "If you live in a regulated state, a licensed room is the safest option and worth using first.",
+        "If you don't, offshore sites remain the common route — with fewer protections, as always.",
+        "Enforcement continues to target operators and payment processors, not individual players.",
+        "Some offshore rooms geo-block specific states, so always confirm access from your location.",
+      ] },
+      { type: "p", text: "For players outside regulated states, the offshore market is where the volume is. Rooms like [Americas Cardroom](/reviews/americas-cardroom/) offer the deepest traffic available to US players, and choosing among offshore options comes down to traffic, banking and rewards — the factors we walk through in our [guide to choosing a poker site](/guides/how-to-choose-a-poker-site/)." },
+      { type: "h2", text: "The Canada comparison" },
+      { type: "p", text: "It is worth noting how different the picture is just across the border. Canada has taken a more permissive path, and Ontario in particular now runs a regulated market that lets private operators offer poker under provincial oversight. Canadian players generally have both regulated options and easy access to offshore rooms. Our [Canada online poker guide](/guides/canada-online-poker/) covers that landscape if you play from north of the border." },
+      { type: "h2", text: "The bottom line" },
+      { type: "p", text: "US online poker in 2026 is still a patchwork, but a slowly improving one. Regulated states are deepening their player pools through shared liquidity, and budget pressures continue to nudge new states toward legislation. For most American players, though, the day-to-day reality is unchanged: check your state's status, use a licensed room if one is available, and otherwise choose an established offshore site carefully. Laws change and vary by location, so treat this as a starting point and confirm the rules where you live — this is general information, not legal advice." },
+    ],
+  },
+  {
+    slug: "ontario-regulated-poker-lessons-2026",
+    title: "Ontario's Regulated Market Two Years On: Lessons for Canadian Poker Players",
+    metaTitle: "Ontario Online Poker in 2026: What Regulation Changed for Players",
+    description:
+      "Ontario's regulated iGaming market has reshaped online poker in Canada. Here's what changed, what Canadian players gained, and how it compares to offshore rooms.",
+    category: "Legal & Regulation",
+    author: AUTHOR,
+    date: "2026-07-28",
+    readMins: 6,
+    excerpt:
+      "Ontario's regulated market matured, giving Canadians licensed options for the first time. Here's what it means versus the offshore rooms most players still use.",
+    tags: ["Canada", "Ontario", "regulation", "iGaming"],
+    body: [
+      { type: "p", text: "When Ontario launched its regulated online gaming market, it marked the most significant change to Canadian online poker in a generation. Instead of every Canadian relying on offshore operators, residents of Canada's largest province suddenly had access to licensed, provincially supervised poker rooms. Two years on, the market has matured enough to draw some real lessons — both for Ontario players and for Canadians elsewhere watching to see whether their province follows." },
+      { type: "p", text: "Our full [Canada online poker guide](/guides/canada-online-poker/) covers the national picture, but this article focuses on what Ontario's experience actually teaches us about regulated versus offshore play." },
+      { type: "h2", text: "What Ontario actually did" },
+      { type: "p", text: "Ontario created a framework that allows private operators to offer poker, casino and sports betting under provincial oversight, rather than restricting online gaming to a single government-run platform. That distinction matters: by letting multiple licensed operators compete, the province created choice and consumer protection at the same time. Players gained recourse, dispute resolution, and mandated responsible-gambling tools that offshore sites are not obligated to provide." },
+      { type: "p", text: "The trade-off, as always with regulation, is a smaller and more walled-off player pool. A provincial market is inherently limited to that province's population, which affects the size of tournaments and the number of tables running at any given hour." },
+      { type: "h2", text: "Lesson one: consumer protection is a genuine benefit" },
+      { type: "p", text: "The clearest lesson is that regulation delivers on consumer protection. Licensed Ontario operators must follow rules on fund segregation, fair games, advertising standards and responsible-gambling controls. For players who value knowing that a regulator stands behind the site, this is a real, tangible advantage over the offshore market — where, as we always note, you trade some protection for access and scale." },
+      { type: "p", text: "This is the same trade-off we describe when helping players weigh their options in our [guide to choosing a poker site](/guides/how-to-choose-a-poker-site/): a licensed room offers safety and recourse, while offshore rooms compete on liquidity, rewards and banking flexibility." },
+      { type: "h2", text: "Lesson two: liquidity is the hard problem" },
+      { type: "p", text: "The biggest challenge for any regulated market is liquidity — you need enough players to fill tables and build big tournament guarantees. Ontario's market is sizeable by provincial standards, but it cannot match the continent-spanning pools of the largest offshore networks. This is precisely why many serious tournament players still keep an offshore account alongside a regulated one: the guarantees and field sizes at a network like the one behind [Americas Cardroom](/reviews/americas-cardroom/) remain larger than any single province can support." },
+      { type: "p", text: "The lesson for other provinces considering regulation is that liquidity-sharing — pooling players across jurisdictions — is what ultimately makes a regulated market competitive. Without it, regulated rooms risk feeling quiet compared to the offshore alternatives players already use." },
+      { type: "h2", text: "Lesson three: banking still favours crypto offshore" },
+      { type: "p", text: "One area where regulated operators have a natural edge is conventional banking. Licensed Ontario rooms typically support standard Canadian payment methods and Canadian dollars directly, which is convenient for players who never wanted to touch cryptocurrency. Offshore rooms, by contrast, are built around crypto — and for good reason, as we explain in our [deposits and withdrawals guide](/guides/deposits-and-withdrawals/): it is faster and cheaper for cross-border play. Ontario shows that when a market is properly regulated within a country, everyday banking becomes easy again." },
+      { type: "h2", text: "What it means for Canadian players today" },
+      { type: "list", items: [
+        "Ontario residents have licensed options with strong consumer protections — worth using first.",
+        "Offshore rooms still offer bigger tournaments and deeper cash-game traffic.",
+        "Many players keep both: a regulated account for safety, an offshore one for scale.",
+        "Outside Ontario, most Canadians still rely primarily on offshore sites.",
+      ] },
+      { type: "p", text: "For Canadians outside Ontario, the offshore market remains the default, and rooms such as [BetOnline](/reviews/betonline-poker/) accept players nationwide with crypto-friendly banking. But Ontario's experience is a preview of where the rest of the country could head if more provinces adopt similar frameworks." },
+      { type: "h2", text: "The bottom line" },
+      { type: "p", text: "Two years in, Ontario's regulated market has proven that licensing can coexist with a competitive product — delivering real consumer protection and easy local banking, at the cost of a smaller player pool. For Canadian players, the smart approach is to take advantage of regulated options where they exist while understanding what offshore rooms still do better. As always, this is general information rather than legal advice, and the regulated landscape continues to evolve province by province." },
+    ],
+  },
+  {
+    slug: "chico-vs-winning-poker-network-2026",
+    title: "Chico Network vs. Winning Poker Network: Where Should You Play in 2026?",
+    metaTitle: "Chico vs Winning Poker Network 2026: Which Is Better for You?",
+    description:
+      "The two biggest US-facing poker networks compared: traffic, games, bonuses, banking and player type. A practical 2026 guide to choosing between Chico and WPN.",
+    category: "Operators",
+    author: AUTHOR,
+    date: "2026-07-25",
+    readMins: 7,
+    excerpt:
+      "Almost every US-facing room sits on one of two networks. Here's how the Winning Poker Network and the Chico Network compare — and which suits your game.",
+    tags: ["Chico Network", "Winning Poker Network", "comparison", "traffic"],
+    body: [
+      { type: "p", text: "Almost every poker room open to US and Canadian players sits on one of two networks: the Winning Poker Network (WPN) or the Chico Poker Network. Understanding the difference between them is more useful than comparing individual brands, because the network determines the player pool, the software, the traffic and much of the banking. In 2026, both networks are strong — but they suit different players. Here is a practical comparison to help you choose." },
+      { type: "p", text: "The brands you already know map neatly onto the two networks. On WPN you have [Americas Cardroom](/reviews/americas-cardroom/) and [Black Chip Poker](/reviews/black-chip-poker/). On Chico you have [BetOnline](/reviews/betonline-poker/), [SportsBetting.ag](/reviews/sportsbetting-ag/) and [TigerGaming](/reviews/tigergaming/). Because sites on the same network share a player pool, choosing a brand is often really about choosing a network." },
+      { type: "h2", text: "Traffic: WPN leads on volume" },
+      { type: "p", text: "The single biggest difference is traffic. The Winning Poker Network is the busier of the two and consistently ranks as the largest pool available to US players. That means fuller tables across more stakes and formats, and it is the foundation of WPN's marquee tournaments. If your priority is always being able to find a game — especially outside North American peak hours — WPN has the edge." },
+      { type: "p", text: "The Chico Network is the third-busiest option for US players and very much viable, but its pool is smaller. During peak evening hours the difference is modest; in off-peak windows or at higher stakes, WPN's depth becomes more noticeable." },
+      { type: "h2", text: "Tournaments: WPN's guarantees are bigger" },
+      { type: "p", text: "WPN's larger pool lets it run bigger tournaments, headlined by the Venom series and supported by weekly schedules guaranteeing millions in prize pools. Chico runs a solid daily schedule with reliable guarantees, but it does not attempt to match WPN's flagship events. Tournament-focused players generally gravitate to WPN for this reason." },
+      { type: "h2", text: "Games and softness: Chico's quieter pool can be an advantage" },
+      { type: "p", text: "Here is where it gets interesting. A smaller, more recreational pool is not purely a negative — it can mean softer games. The Chico Network has a reputation for a recreational-leaning player base, which winning players may find advantageous even if the overall volume is lower. WPN's larger pool includes more serious grinders. So the 'better' network depends partly on whether you value volume or game softness." },
+      { type: "h2", text: "Banking: both are crypto-first, Chico especially so" },
+      { type: "p", text: "Both networks are built around cryptocurrency, and both offer fast crypto payouts. The Chico rooms are particularly crypto-centric, with a wide coin menu and same-day withdrawals. WPN also processes crypto quickly. For most players banking is a wash between the two — both are far better than the card era, as we cover in our [deposits and withdrawals guide](/guides/deposits-and-withdrawals/)." },
+      { type: "h2", text: "Bonuses and rewards" },
+      { type: "p", text: "Headline welcome bonuses are broadly comparable — 100% matches into four figures on both networks — but the details differ, and the ongoing rewards matter more than the sign-up offer. WPN rooms lean on their loyalty programs and requestable rakeback; Chico rooms offer transparent rake-based clearing and, at TigerGaming, a tiered rakeback ladder. We break down how to compare these fairly in our [poker bonuses guide](/guides/poker-bonuses-explained/)." },
+      { type: "h2", text: "Which should you choose?" },
+      { type: "list", items: [
+        "Choose WPN (ACR / Black Chip) if you want maximum traffic and the biggest tournaments.",
+        "Choose Chico (BetOnline / SportsBetting.ag / TigerGaming) for softer recreational games and a sportsbook-plus-casino under one wallet.",
+        "Play both if you want to spread action, chase two welcome bonuses, and always find a game.",
+      ] },
+      { type: "p", text: "Many experienced players simply keep accounts on both networks. The welcome offers are separate, the pools are separate, and having both maximises your ability to find good games at any hour. If you are starting with one, our overall [guide to choosing a poker site](/guides/how-to-choose-a-poker-site/) will help you weigh the factors against how you actually play." },
+      { type: "h2", text: "The bottom line" },
+      { type: "p", text: "In 2026 the Winning Poker Network wins on traffic and tournaments, while the Chico Network competes on softer games and a strong crypto-first cashier. Neither is universally 'better' — the right pick depends on whether you prioritise volume and guarantees or game softness and an all-in-one gambling account. For most players, the honest answer is to try both and let your own results decide." },
+    ],
+  },
+  {
+    slug: "how-to-read-poker-welcome-bonus-2026",
+    title: "How to Read a Poker Welcome Bonus Before You Deposit",
+    metaTitle: "How to Read a Poker Welcome Bonus (2026): Avoid the Common Traps",
+    description:
+      "A '100% up to $2,000' bonus rarely means what newcomers think. Learn how to read poker welcome offers, clearing terms and real value before you deposit.",
+    category: "Bonuses",
+    author: AUTHOR,
+    date: "2026-07-23",
+    readMins: 6,
+    excerpt:
+      "The headline bonus number is marketing. Here's how to read the terms underneath it and work out what you'll actually collect before you deposit a cent.",
+    tags: ["bonuses", "rakeback", "promo codes", "value"],
+    body: [
+      { type: "p", text: "'100% up to $2,000' is one of the most common phrases in online poker, and one of the most misunderstood. Newcomers often deposit expecting a $2,000 gift and are surprised when the money does not appear in their balance. Learning to read a welcome bonus correctly — before you deposit — is one of the highest-value skills a new player can develop. Here is how to do it." },
+      { type: "p", text: "This is a practical companion to our full [poker bonuses explained guide](/guides/poker-bonuses-explained/); think of it as the quick pre-deposit checklist." },
+      { type: "h2", text: "Step one: understand 'up to' and the match rate" },
+      { type: "p", text: "'100% up to $2,000' means the site matches your first deposit dollar-for-dollar, to a maximum of $2,000. Deposit $300 and you are eligible for $300 in bonus, not $2,000. The cap is the ceiling, not the amount you receive. This alone clears up most of the confusion: the big number only applies if you deposit the big number." },
+      { type: "h2", text: "Step two: know that the bonus is not cash yet" },
+      { type: "p", text: "The bonus does not land in your withdrawable balance on deposit. It sits pending and is released in small increments as you play real-money games and generate rake. In other words, you earn the bonus by playing — the site is effectively giving you a portion of your own rake back as an incentive. This is why a huge headline number can be worthless to a casual player who will not generate enough rake before it expires." },
+      { type: "h2", text: "Step three: check the clearing rate" },
+      { type: "p", text: "The clearing rate tells you how much rake unlocks each piece of the bonus — for example, a few dollars released per set amount of rake generated. A slower clearing rate means you need to play more to collect the same bonus. Always find this number before depositing; it is the single best predictor of how much of the bonus you will actually see." },
+      { type: "h2", text: "Step four: check the expiry window" },
+      { type: "p", text: "Bonuses expire, usually within 30 to 60 days. Anything you have not cleared by the deadline is forfeited. Match the expiry against how much you realistically play. If you play a few hours a week, a 30-day window on a large bonus may be impossible to clear — and a smaller, easier bonus could be better value for you." },
+      { type: "h2", text: "Step five: look past the bonus to rakeback" },
+      { type: "p", text: "For regular players, ongoing rakeback usually delivers more lifetime value than any one-time welcome bonus. Rakeback returns a percentage of your rake continuously, and it never expires. When comparing two sites, the one with the better ongoing rewards program often wins even if its welcome bonus is smaller. Rooms like [Black Chip Poker](/reviews/black-chip-poker/) build their appeal around requestable rakeback and tiered loyalty, which can outweigh a flashier headline offer elsewhere." },
+      { type: "h2", text: "Step six: don't forget the promo code" },
+      { type: "p", text: "Many sites require a specific promo or bonus code, entered at sign-up or first deposit, to unlock the best offer. Miss it and you may get a smaller default bonus or none at all. Codes change, so confirm the current one on the operator's site before you deposit." },
+      { type: "h2", text: "A quick pre-deposit checklist" },
+      { type: "list", items: [
+        "What is the match rate and cap — and how much will I actually deposit?",
+        "How does the bonus clear, and at what rake-per-dollar rate?",
+        "What is the expiry window, and can I realistically clear it in time?",
+        "What ongoing rakeback or rewards exist beyond the welcome offer?",
+        "Is a promo code required, and do I have the current one?",
+      ] },
+      { type: "p", text: "Run any offer through those five questions and the marketing melts away, leaving the real value underneath. A well-structured 100% up to $2,000 at a high-traffic room like [Americas Cardroom](/reviews/americas-cardroom/) can be excellent for an active player — and mediocre for someone who plays once a month. The number is the same; the value is personal." },
+      { type: "h2", text: "The bottom line" },
+      { type: "p", text: "A poker welcome bonus is not a gift — it is a rake rebate you earn through play, capped by a headline number and limited by a clock. Read the match rate, clearing terms, expiry and rakeback before you deposit, and judge the offer by what you will realistically collect. Do that, and you will never again be surprised by a bonus that did not appear. For the deeper mechanics, see our [full bonuses guide](/guides/poker-bonuses-explained/) and our [checklist for choosing a site](/guides/how-to-choose-a-poker-site/)." },
+    ],
+  },
+  {
+    slug: "stablecoins-poker-bankrolls-mainstream-2026",
+    title: "Stablecoins and Poker Bankrolls: USDC and USDT Go Mainstream",
+    metaTitle: "Stablecoins for Poker Bankrolls: Why USDC & USDT Went Mainstream",
+    description:
+      "Stablecoins have become the smart way to hold an online poker bankroll — dollar-pegged, fast and fee-free. Here's why USDC and USDT took over, and how to use them.",
+    category: "Banking & Crypto",
+    author: AUTHOR,
+    date: "2026-07-21",
+    readMins: 6,
+    excerpt:
+      "Dollar-pegged stablecoins solved crypto's biggest drawback for poker players. Here's why USDC and USDT are now the smart way to hold a bankroll.",
+    tags: ["stablecoins", "USDC", "USDT", "crypto", "banking"],
+    body: [
+      { type: "p", text: "For years, the standard objection to funding online poker with cryptocurrency was simple: nobody wants their bankroll to lose value while it sits idle. A player who deposited in Bitcoin could log off with $500 and log back in to find it worth $460 — through no fault of their own play. Stablecoins have quietly solved that problem, and in 2026 they have become the smart default for holding an online poker bankroll." },
+      { type: "p", text: "This piece explains what stablecoins are, why they fit poker so well, and how to use them — and it builds on the fundamentals in our [deposits and withdrawals guide](/guides/deposits-and-withdrawals/)." },
+      { type: "h2", text: "What a stablecoin actually is" },
+      { type: "p", text: "A stablecoin is a cryptocurrency designed to hold a fixed value, almost always pegged one-to-one with the US dollar. The two most widely used are USDC and USDT. One unit is intended to always be worth one dollar, so your balance does not swing with the crypto market. You keep the speed, low fees and bank-independence of crypto, without the volatility that made people nervous." },
+      { type: "h2", text: "Why they fit poker perfectly" },
+      { type: "p", text: "Poker bankrolls are working capital: money you move on and off sites, keep in reserve for variance, and want to be worth exactly what you put in. Stablecoins match that need better than any other method. Consider what a stablecoin gives a poker player:" },
+      { type: "list", items: [
+        "Dollar stability — your bankroll stays worth what you deposited.",
+        "Fast settlement — deposits are near-instant and withdrawals typically clear in a day or two.",
+        "No platform fees at most rooms, unlike card deposits that can carry hefty charges.",
+        "Bank independence — no institution declining your gambling transactions.",
+      ] },
+      { type: "p", text: "In effect, a stablecoin behaves like a fast, fee-free, uncancellable dollar transfer. That is exactly what a poker bankroll wants to be." },
+      { type: "h2", text: "How the offshore rooms adapted" },
+      { type: "p", text: "The offshore poker market noticed player demand and adapted. Crypto-first rooms like [BetOnline](/reviews/betonline-poker/) and [SportsBetting.ag](/reviews/sportsbetting-ag/) now support a broad menu of coins including USDC and USDT prominently, precisely because so many players prefer to hold and move funds in dollar-pegged terms. The cashier experience has been built around this reality, not bolted on afterward." },
+      { type: "h2", text: "Using stablecoins step by step" },
+      { type: "p", text: "The workflow is straightforward, and you only learn it once:" },
+      { type: "list", items: [
+        "Buy USDC or USDT on a mainstream exchange using regular currency.",
+        "Send it to the deposit address the poker room provides — it arrives in minutes.",
+        "Play, keeping your balance stable in dollar terms throughout.",
+        "Withdraw back to your wallet, then convert to cash on the exchange when you choose.",
+      ] },
+      { type: "p", text: "A couple of technical notes matter. Stablecoins exist on different blockchains (networks), and you must send and receive on the same network the site specifies — sending on the wrong network can lose funds. And because crypto transactions are irreversible, always verify the address before confirming. These are one-time habits, not ongoing hassles." },
+      { type: "h2", text: "Stablecoins and bonuses" },
+      { type: "p", text: "Funding with a stablecoin does not change how welcome offers work — a bonus still clears through rake over time, as we explain in our [poker bonuses guide](/guides/poker-bonuses-explained/). But there is a subtle advantage: because your deposit holds its dollar value, the size of your bonus-eligible deposit is predictable and stable, with no risk of a market dip shrinking your buy-in before you have cleared the offer." },
+      { type: "h2", text: "Any downsides?" },
+      { type: "p", text: "Stablecoins are not risk-free in the abstract — they depend on the issuer maintaining the peg, and players should stick to the widely used, well-established coins rather than obscure ones. But for the practical purpose of moving a poker bankroll on and off a site over days or weeks, they are as close to a digital dollar as the crypto ecosystem offers, and vastly more convenient than the card-and-wire era they replaced." },
+      { type: "h2", text: "The bottom line" },
+      { type: "p", text: "Stablecoins removed the last real objection to crypto poker banking. They give players dollar stability with all the speed and low-fee benefits of cryptocurrency, which is why USDC and USDT have moved from niche to mainstream. If volatility was the only thing keeping you on cards, that reason is gone — and switching will make every deposit and cash-out faster and cheaper. Start with our [banking guide](/guides/deposits-and-withdrawals/) for the full walkthrough." },
+    ],
+  },
+  {
+    slug: "black-chip-poker-rewards-explained-2026",
+    title: "Black Chip Poker's Rewards, Explained: Rakeback, Tiers and Who Benefits",
+    metaTitle: "Black Chip Poker Rewards 2026: Rakeback & Loyalty Explained",
+    description:
+      "Black Chip Poker pairs WPN traffic with a distinct rewards package. We explain its rakeback, loyalty tiers and who benefits most from choosing it over other WPN skins.",
+    category: "Operators",
+    author: AUTHOR,
+    date: "2026-07-18",
+    readMins: 6,
+    excerpt:
+      "Black Chip Poker offers the same WPN pool as ACR with a different rewards angle. Here's how its rakeback and loyalty tiers work, and who benefits most.",
+    tags: ["Black Chip Poker", "rakeback", "WPN", "loyalty"],
+    body: [
+      { type: "p", text: "Among the poker rooms on the Winning Poker Network, [Black Chip Poker](/reviews/black-chip-poker/) occupies an interesting position. It draws from exactly the same player pool as the network's flagship, which means identical traffic, tournaments and software — but it wraps that pool in a different rewards and promotions package. For value-focused players, understanding how Black Chip's rewards work is the key to deciding whether it is the right WPN entry point for you." },
+      { type: "h2", text: "Same pool, different wrapper" },
+      { type: "p", text: "The most important thing to understand is that Black Chip Poker and [Americas Cardroom](/reviews/americas-cardroom/) are separate brands (skins) sharing one network. You are playing against the same opponents in the same games, whichever you choose. The playing experience is effectively identical. What differs is the branding, the welcome offer, and the ongoing rewards structure. So the choice between them is really a choice between rewards packages, not between poker games." },
+      { type: "h2", text: "The welcome offer" },
+      { type: "p", text: "Black Chip's headline is a 100% first-deposit bonus into four figures, added after a qualifying deposit and cleared through real-money play over a set window. That matches the flagship's headline number while sitting on the same network. As always, the bonus clears gradually through rake rather than arriving as instant cash — the mechanics we detail in our [poker bonuses guide](/guides/poker-bonuses-explained/)." },
+      { type: "h2", text: "Where Black Chip differentiates: rakeback" },
+      { type: "p", text: "The real differentiator is ongoing rewards. Black Chip offers a meaningful rakeback percentage that players can secure, alongside a multi-tier loyalty program where points accumulate toward escalating cash rewards. The nuance that trips people up is that the best rakeback often must be requested rather than being applied automatically — so players who set it up capture more value than those who assume it is on by default." },
+      { type: "p", text: "For a regular player, this ongoing rakeback typically matters more than the one-time welcome bonus. As we always emphasise, lifetime rewards usually outweigh sign-up offers, and a room's loyalty structure deserves as much scrutiny as its headline number. Our [guide to choosing a poker site](/guides/how-to-choose-a-poker-site/) walks through weighing these factors together." },
+      { type: "h2", text: "Who benefits most from Black Chip" },
+      { type: "list", items: [
+        "Volume players who will actively pursue and maximise requestable rakeback.",
+        "Players who prefer Black Chip's loyalty-tier structure over the flagship's rewards.",
+        "Anyone who wants WPN's deep traffic and big tournaments via an alternative brand.",
+        "Multi-account players spreading welcome offers across WPN skins.",
+      ] },
+      { type: "p", text: "Conversely, a very casual player who will not generate much rake will see little difference between Black Chip and other WPN rooms — the rewards structures only diverge meaningfully at volume. For low-volume players, the decision can come down to which welcome offer and interface they prefer." },
+      { type: "h2", text: "The tournament angle" },
+      { type: "p", text: "Because it shares the WPN schedule, Black Chip gives players access to the same large weekly guarantees and marquee series as the rest of the network, including qualifiers into the flagship Venom events. Tournament players lose nothing by choosing Black Chip — they get the full WPN schedule with the brand's own rewards on top." },
+      { type: "h2", text: "How to decide" },
+      { type: "p", text: "The honest decision framework is this: if you are a volume player who will actively manage rakeback, compare Black Chip's rakeback and loyalty tiers against the alternatives and pick whichever returns more for your specific game and stakes. If you are casual, choose on welcome offer and feel. And if you want to maximise everything, there is nothing stopping you from holding accounts at more than one WPN brand — though remember you are always drawing from the same shared pool." },
+      { type: "h2", text: "The bottom line" },
+      { type: "p", text: "Black Chip Poker is a strong, fully-featured entry point into the Winning Poker Network, distinguished by a rewards package built around requestable rakeback and loyalty tiers rather than by any difference in the games themselves. Volume players who take the time to set up and maximise those rewards stand to benefit most. For the full picture, read our detailed [Black Chip Poker review](/reviews/black-chip-poker/)." },
+    ],
+  },
+  {
+    slug: "online-poker-tournament-guarantees-new-highs-2026",
+    title: "Online Poker Tournament Guarantees Hit New Highs in 2026",
+    metaTitle: "Online Poker Tournament Guarantees Reach New Highs in 2026",
+    description:
+      "Guaranteed prize pools at US-facing poker sites keep climbing. We look at what's driving the growth, which series lead, and how players can capitalise sensibly.",
+    category: "Tournaments",
+    author: AUTHOR,
+    date: "2026-07-16",
+    readMins: 6,
+    excerpt:
+      "Guaranteed prize pools keep climbing at US-facing rooms. Here's what's driving the growth and how players can take advantage without blowing their bankroll.",
+    tags: ["tournaments", "guarantees", "MTT", "series"],
+    body: [
+      { type: "p", text: "One of the clearest trends in US-facing online poker over the past few years has been the steady climb in tournament guarantees. Weekly schedules that once topped out at modest figures now routinely guarantee millions in combined prize pools, and flagship series have pushed headline guarantees to levels that would have seemed implausible a decade ago. In 2026 that trajectory has continued. Here is what is driving it — and how players can take advantage without letting the big numbers distort their bankroll decisions." },
+      { type: "h2", text: "What's driving the growth" },
+      { type: "p", text: "Several forces are pushing guarantees higher at once. Crypto banking has widened the pool of players who can easily deposit and withdraw, feeding bigger fields. Networks compete for players partly by advertising ever-larger guarantees. And the mystery-bounty format — which scatters cash rewards throughout a field and dangles a huge top prize — has proven enormously popular, encouraging operators to build events around it. Together these factors create a virtuous cycle: bigger guarantees attract bigger fields, which support still-bigger guarantees." },
+      { type: "h2", text: "Which series lead" },
+      { type: "p", text: "The Winning Poker Network sets the pace, headlined by the Venom and supported by weekly schedules guaranteeing millions across their events. The network behind [Americas Cardroom](/reviews/americas-cardroom/) and [Black Chip Poker](/reviews/black-chip-poker/) has the traffic to sustain the largest guarantees available to US players. The Chico Network, home to [BetOnline](/reviews/betonline-poker/), runs a reliable daily schedule with solid guarantees, though it does not chase the same flagship scale. The result is a market where a player can find a big-guarantee event most days of the week." },
+      { type: "h2", text: "The overlay opportunity" },
+      { type: "p", text: "One underrated benefit of aggressive guarantees is the overlay. When a guaranteed tournament does not attract enough entries to cover its guarantee, the operator makes up the difference — meaning there is literally more money in the prize pool than players paid in. Overlays represent genuine positive expected value, and they occur more often when operators set ambitious guarantees. Sharp players watch for events likely to overlay, particularly newer tournaments or off-peak scheduling." },
+      { type: "h2", text: "How to capitalise sensibly" },
+      { type: "p", text: "Rising guarantees are exciting, but bigger fields mean more variance and a lower probability of cashing on any single attempt. The discipline that separates winning tournament players from busted bankrolls is the same regardless of guarantee size:" },
+      { type: "list", items: [
+        "Bankroll for variance — tournaments require a larger cushion than cash games.",
+        "Use satellites to enter big events cheaply rather than firing full buy-ins.",
+        "Prioritise events likely to overlay for positive expected value.",
+        "Treat a deep run as upside, not an expectation you are counting on.",
+        "Keep tournament spending to a pre-decided portion of your total bankroll.",
+      ] },
+      { type: "p", text: "The temptation with record guarantees is to over-invest chasing a headline prize. Resist it. The players who profit from the guarantee boom are those who enter efficiently — often via satellites — and who size their tournament bankroll to survive the inevitable dry spells. Our [guide to choosing a poker site](/guides/how-to-choose-a-poker-site/) covers how to evaluate a room's tournament ecosystem as part of that decision." },
+      { type: "h2", text: "What it means for the market" },
+      { type: "p", text: "For players, rising guarantees are unambiguously good news: more prize money to compete for, more overlay opportunities, and a richer schedule. For operators, it is a competitive arms race that rewards whichever network can sustain the traffic to back its promises. The Winning Poker Network's traffic advantage is why it continues to set the ceiling on guarantees available to US and Canadian players." },
+      { type: "h2", text: "The bottom line" },
+      { type: "p", text: "Tournament guarantees hitting new highs in 2026 reflects a healthier, more competitive US-facing market — driven by crypto banking, network competition and the popularity of mystery-bounty formats. The opportunity is real, especially around overlays, but it is captured through disciplined, satellite-heavy entry and sound bankroll management, not by chasing headlines. Play the guarantee boom smart, and it is one of the best things to happen to online tournament poker in years." },
+    ],
+  },
+  {
+    slug: "responsible-gambling-tools-improving-offshore-2026",
+    title: "Responsible Gambling Tools Are Getting Better at Offshore Rooms",
+    metaTitle: "Responsible Gambling Tools at Offshore Poker Sites: 2026 Update",
+    description:
+      "Deposit limits, cool-offs and self-exclusion are increasingly standard at offshore poker rooms. We look at what's available in 2026 and how to use these tools well.",
+    category: "Responsible Gambling",
+    author: AUTHOR,
+    date: "2026-07-14",
+    readMins: 6,
+    excerpt:
+      "Player-protection tools are becoming standard even at unregulated rooms. Here's what's available in 2026 and how to use limits and cool-offs to stay in control.",
+    tags: ["responsible gambling", "player protection", "limits", "self-exclusion"],
+    body: [
+      { type: "p", text: "Responsible-gambling tools have historically been associated with licensed, regulated operators — the deposit limits and self-exclusion options mandated by gaming authorities. But one welcome trend in 2026 is that these player-protection features are increasingly standard even at offshore poker rooms that are not legally required to provide them. That is good for players, and it is worth knowing what is available and how to use it well." },
+      { type: "p", text: "This piece complements our full [responsible gambling resource](/responsible-gambling/), which covers warning signs and support helplines in the US and Canada. Here we focus on the practical tools and the encouraging direction of travel." },
+      { type: "h2", text: "Why offshore rooms are adding these tools" },
+      { type: "p", text: "Offshore operators are not bound by US state responsible-gambling mandates, so why are they improving these features? Partly reputation: established rooms compete on trust, and player-protection tools signal a serious, sustainable operator rather than a fly-by-night one. Partly retention: players who stay in control play for years, while players who blow up in a weekend do not come back. And partly because the software has matured — the tools are now standard components that are straightforward to offer. Whatever the motivation, the result benefits players." },
+      { type: "h2", text: "What's available in 2026" },
+      { type: "p", text: "The core toolkit at a well-run offshore room now typically includes:" },
+      { type: "list", items: [
+        "Deposit limits — cap how much you can deposit per day, week or month.",
+        "Session and time reminders — track how long you have been playing.",
+        "Cool-off periods — a short, self-imposed break from the tables.",
+        "Self-exclusion — block your own access for a set period, or permanently.",
+      ] },
+      { type: "p", text: "The single most effective of these is the deposit limit, because it works pre-emptively. By deciding in a calm moment how much you are willing to risk in a period, you remove the in-the-moment decision that leads to chasing losses. Setting a deposit limit when you open an account is one of the smartest habits a player can adopt." },
+      { type: "h2", text: "How to use the tools well" },
+      { type: "p", text: "Tools only help if you use them deliberately. A few principles make them effective:" },
+      { type: "list", items: [
+        "Set a deposit limit before you start, not after a losing session.",
+        "Treat the limit as a hard rule, not a suggestion you can override when tilted.",
+        "Use cool-offs proactively after a rough session rather than pushing on.",
+        "If limits are not enough, self-exclusion exists and using it is a strength, not a failure.",
+      ] },
+      { type: "p", text: "The through-line is that these tools work best when set up in advance, while you are thinking clearly, rather than reached for in the middle of a downswing. That is when discipline is hardest and pre-commitment matters most." },
+      { type: "h2", text: "Choosing a room that takes this seriously" },
+      { type: "p", text: "When evaluating where to play, the presence and quality of responsible-gambling tools is a legitimate signal of operator quality — one we factor into our assessments alongside traffic, banking and rewards. A room like [BetOnline](/reviews/betonline-poker/) that has operated for years and offers proper player-protection controls is demonstrating the kind of stability you want from a place holding your money. Our [guide to choosing a poker site](/guides/how-to-choose-a-poker-site/) treats trust and track record as core criteria for exactly this reason." },
+      { type: "p", text: "It is also worth remembering the broader context: offshore rooms are not regulated by US state authorities, so these tools are voluntary rather than guaranteed, and their availability varies. Understanding that landscape is part of playing offshore responsibly — our [US legality guide](/guides/us-poker-legality/) explains what regulation does and does not provide." },
+      { type: "h2", text: "The bottom line" },
+      { type: "p", text: "The spread of responsible-gambling tools to offshore rooms is a genuinely positive development, giving players real control even outside regulated markets. Deposit limits, cool-offs and self-exclusion are increasingly standard — but they only protect you if you use them, and use them early. Set your limits when you open an account, treat them as firm, and choose rooms that take player protection seriously. If gambling ever stops being fun, our [responsible gambling page](/responsible-gambling/) lists support resources for the US and Canada. Play for entertainment, within your means, and the game stays a game." },
+    ],
+  },
+  // __MORE__
+];
+
+export const sortedNews = [...newsArticles].sort((a, b) => (a.date < b.date ? 1 : -1));
+
+export function getArticle(slug: string): NewsArticle | undefined {
+  return newsArticles.find((a) => a.slug === slug);
+}
+
+export function formatNewsDate(iso: string): string {
+  const [y, m, d] = iso.split("-").map(Number);
+  const months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+  return `${months[m - 1]} ${d}, ${y}`;
+}

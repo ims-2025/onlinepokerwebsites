@@ -15,6 +15,7 @@ export const site = {
 export const primaryNav = [
   { label: "Best Poker Sites", href: "/" },
   { label: "Reviews", href: "/#rankings" },
+  { label: "News", href: "/news/" },
   { label: "Bonuses", href: "/guides/poker-bonuses-explained/" },
   { label: "Banking", href: "/guides/deposits-and-withdrawals/" },
   { label: "US Legality", href: "/guides/us-poker-legality/" },

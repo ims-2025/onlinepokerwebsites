@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { rankedOperators } from "@/lib/operators";
 import { guideLinks, site } from "@/lib/site";
+import { sortedNews, formatNewsDate } from "@/lib/news";
 import OperatorCard from "@/components/OperatorCard";
 import SectionHeading from "@/components/SectionHeading";
 import StarRating from "@/components/StarRating";
@@ -212,6 +213,47 @@ export default function HomePage() {
               </Link>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Latest News */}
+      <section id="news" className="scroll-mt-20 border-t border-neutral-200 bg-white">
+        <div className="mx-auto max-w-content px-4 py-14">
+          <div className="flex items-end justify-between gap-4">
+            <SectionHeading
+              eyebrow="Poker News"
+              title="Latest poker news & analysis"
+              intro="Fresh updates on operators, tournaments, banking and rules for US and Canadian players."
+            />
+            <Link
+              href="/news/"
+              className="mb-8 hidden shrink-0 rounded-lg border border-neutral-300 px-4 py-2 text-sm font-bold text-neutral-900 hover:bg-neutral-100 sm:inline-block"
+            >
+              All news →
+            </Link>
+          </div>
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {sortedNews.slice(0, 3).map((a) => (
+              <Link
+                key={a.slug}
+                href={`/news/${a.slug}/`}
+                className="group flex flex-col rounded-xl border border-neutral-200 bg-neutral-50 p-5 transition-colors hover:border-felt-500/40"
+              >
+                <div className="flex items-center gap-2 text-xs">
+                  <span className="rounded-full bg-felt-500/10 px-2.5 py-0.5 font-semibold text-felt-700">
+                    {a.category}
+                  </span>
+                  <span className="text-neutral-500">{formatNewsDate(a.date)}</span>
+                </div>
+                <h3 className="mt-2 font-bold text-neutral-900 group-hover:text-felt-700">{a.title}</h3>
+                <p className="mt-2 flex-1 text-sm text-neutral-600">{a.excerpt}</p>
+                <span className="mt-3 text-sm font-semibold text-felt-700">Read →</span>
+              </Link>
+            ))}
+          </div>
+          <Link href="/news/" className="mt-6 inline-block text-sm font-bold text-felt-700 sm:hidden">
+            All news →
+          </Link>
         </div>
       </section>
 

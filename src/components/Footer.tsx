@@ -61,6 +61,11 @@ export default function Footer() {
                   Responsible Gambling
                 </Link>
               </li>
+              <li>
+                <Link href="/news/" className="text-neutral-500 hover:text-felt-700">
+                  Poker News
+                </Link>
+              </li>
             </ul>
           </nav>
         </div>
