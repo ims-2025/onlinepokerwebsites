@@ -1,7 +1,7 @@
 export const site = {
   name: "Online Poker Websites",
   shortName: "OnlinePokerWebsites",
-  url: "https://onlinepokerwebsites.com",
+  url: "https://www.onlinepokerwebsites.com",
   tagline: "Expert reviews & rankings of the best US and Canada friendly poker sites",
   description:
     "Independent reviews and rankings of the best online poker sites for US and Canadian players. Compare real-money poker rooms on bonuses, traffic, banking, safety and game selection — updated for 2026.",

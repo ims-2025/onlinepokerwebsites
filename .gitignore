@@ -7,3 +7,14 @@ next-env.d.ts
 .DS_Store
 npm-debug.log*
 .env*
+
+# Local preview + scratch artifacts — not for deployment
+/preview
+/preview-latest
+/preview-fixed
+/preview-site
+.wtest/
+*.log
+local_time.txt
+mount_time.txt
+val.mjs
