@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>com.onlinepokerwebsites.autodeploy</string>
+
+  <key>ProgramArguments</key>
+  <array>
+    <string>/bin/bash</string>
+    <string>/Users/cg/Documents/Claude/Projects/General Websites/onlinepokerwebsites/scripts/auto-deploy.sh</string>
+  </array>
+
+  <!-- Runs every day at 8:25 AM local time (offset from the poker-bonuses job at 8:20). -->
+  <key>StartCalendarInterval</key>
+  <dict>
+    <key>Hour</key>
+    <integer>8</integer>
+    <key>Minute</key>
+    <integer>25</integer>
+  </dict>
+
+  <key>RunAtLoad</key>
+  <false/>
+
+  <key>StandardOutPath</key>
+  <string>/Users/cg/Documents/Claude/Projects/General Websites/onlinepokerwebsites/scripts/auto-deploy.out.log</string>
+  <key>StandardErrorPath</key>
+  <string>/Users/cg/Documents/Claude/Projects/General Websites/onlinepokerwebsites/scripts/auto-deploy.err.log</string>
+</dict>
+</plist>
